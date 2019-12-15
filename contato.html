@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Contato</title>
+	
+	<link rel="stylesheet" href="styleContato.css">
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+	<link rel="icon" type="image/png" href="img/favicon.ico">
+	
+	<script src="js/mapa.js"></script>
+	<script src="js/jquery-1.6.3.min.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+	<div class="nav-total" >
+		<nav id="principal">
+			<a href="index.html"><img src="img/mini-logo.png" alt="Logo Tec2Pulse"></a>
+			<div id='cssmenu'>
+				<ul>	
+					<li><a href="index.html">Início</a></li>
+					<li><a href="sobre.html">Sobre a T2P</a></li>
+					<li><a href="equipe.html">Equipe</a></li>
+					<li><a href="projeto/projetos.html">Projetos</a></li>
+					<li><a class="pagina-ativa" href="contato.html">Contato</a></li>
+				</ul>
+			</div>
+			<button class="descermenu">
+				<span class="linha"></span>
+				<span class="linha"></span>
+				<span class="linha"></span>
+			</button>
+		</nav>
+	</div>
+	
+	<ul class="vertical">
+		<li ><a  class="desliza" href="index.html">Início</a></li>
+		<li><a class="desliza" href="sobre.html">Sobre a T2P</a></li>
+		<li><a class="desliza" href="equipe.html">Equipe</a></li>
+		<li><a class="desliza" href="projeto/projetos.html">Projetos</a></li>
+		<li><a class="desliza" href="contato.html">Contato</a></li>
+	</ul>
+
+	<section>
+		<h1>MAIS PRÓXIMO DE VOCÊ</h1>
+
+		
+		
+		<div id="form-main">
+			<div id="form-div">
+				<p id="texto">
+					Use este canal para:<br>
+
+					• Sugestões<br>
+					• Críticas<br>
+					• Dúvidas<br>
+					• Orçamentos
+				</p>
+				<form class="form" action="enviar.php" method="POST">
+					
+					<p class="name">
+						<input name="nome" type=text class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"  placeholder="Nome" id="name"  required="required" pattern="[a-z\s]+$" required x-moz-errormessage="Ops. Não esqueça de preencher este campo apenas letras!" />
+					</p>
+
+					<p class="email">
+						<input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email"  required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required x-moz-errormessage="Ops. Não esqueça de preencher no formato exemplo@email.com" />
+					</p>
+					
+					<p class="tel">
+						<input name="telefone" type="text" class="validate[required,custom[tel]] feedback-input" id="tel" placeholder="Tel"  novalidate="novalidate" pattern="[0-9]{9}" required x-moz-errormessage="Ops. Não esqueça de preencher 9 números" />
+					</p>
+
+					<p class="text">
+						<textarea name="mensagem" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comentário" required="required" ></textarea>
+					</p>
+
+					<div class="submit">
+						<input name="enviar" type="submit" value="ENVIAR" id="button-blue" />
+						<div class="ease"></div>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		
+	</section>	
+
+	<div id="mapa">
+	</div>
+
+	
+	<footer id="footer"> 
+
+		<h1>Tec2Pulse</h1> 
+		<!--<img src="Logo/Tec2Pulse-verde-footer.png" alt="Tec2Pulse">-->
+		<p>Developing the future, solving problems</p>
+		<div id='icons'>
+			<div id='fill-facebook'>
+				<a href="https://pt-br.facebook.com/tec2pulse" title="Facebook" target="new1"><i class='fa fa-facebook'></i>
+				</div></a>
+
+				<div id='fill-linkedin'>
+					<a href="https://br.linkedin.com/pub/tec2-pulse-co/98/1bb/410" title="Linkedin" target="new1"><i class='fa fa-linkedin'></i></a>
+				</div>
+
+				<div id='fill-instagram'>
+					<a href="https://instagram.com/tec2pulse" title="Instagram" target="new1"><i class='fa fa-instagram'></i></a>
+				</div>
+
+				<div id='fill-youtube'>
+					<a href="https://www.youtube.com/user/tec2pulse" title="Youtube" target="new1"><i class='fa fa-youtube'></i></a>
+				</div>
+			</div>
+			<p>R. Tito, 54 - Vila Romana, São Paulo - SP | Copyright © All Rights Reserved by Tec2Pulse</p>
+		</footer>
+
+	</body>
+	</html>

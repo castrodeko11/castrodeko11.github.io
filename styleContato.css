@@ -1,0 +1,833 @@
+/* Global reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+   *****************************************************************/
+
+   html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed, 
+   figure, figcaption, footer, header, hgroup, 
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+   	margin: 0;
+   	padding: 0;
+   	border: 0;
+   	font-size: 100%;
+   	font: inherit;
+   	vertical-align: baseline;
+   	font-family: 'galanogrotesque-tuploadedfile';
+
+   }
+
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure, 
+   footer, header, hgroup, menu, nav, section {
+   	display: block;
+   }
+   body {
+   	line-height: 1.5;
+   }
+   ol, ul {
+   	list-style: none;
+   }
+   blockquote, q {
+   	quotes: none;
+   }
+   blockquote:before, blockquote:after,
+   q:before, q:after {
+   	content: '';
+   	content: none;
+   }
+   table {
+   	border-collapse: collapse;
+   	border-spacing: 0;
+   }
+
+
+   /*Fontes
+   *********************************************************************************************/
+
+
+   /*Fonte para H1 */
+   @font-face {
+    font-family: 'galanogrotesque-tuploadedfile';
+    src: url('fonte/galano_grotesque_thin-webfont.eot');
+    src: url('fonte/galano_grotesque_thin-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonte/galano_grotesque_thin-webfont.woff2') format('woff2'),
+    url('fonte/galano_grotesque_thin-webfont.woff') format('woff'),
+    url('fonte/galano_grotesque_thin-webfont.ttf') format('truetype'),
+    url('fonte/galano_grotesque_thin-webfont.svg#galanogrotesque-tuploadedfile') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  /*Fonte para os <p>*/
+  @font-face {
+    font-family: 'galanogrotesquealuploadedfile';
+    src: url('fonte/galano_grotesque_alt_light-webfont.eot');
+    src: url('fonte/galano_grotesque_alt_light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonte/galano_grotesque_alt_light-webfont.woff2') format('woff2'),
+    url('fonte/galano_grotesque_alt_light-webfont.woff') format('woff'),
+    url('fonte/galano_grotesque_alt_light-webfont.ttf') format('truetype'),
+    url('fonte/galano_grotesque_alt_light-webfont.svg#galanogrotesquealuploadedfile') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Extended base styles (site specific)
+*****************************************************************/
+
+html { 
+  overflow-y: scroll; /* always force a scrollbar in non-IE */
+}
+body {
+  background: #e3e5e5;
+  overflow: hidden;
+  line-height: 1.5;
+  color: #000;
+  font-size: 14px;
+}
+a, a:link, a:active, a:visited {
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  -o-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+  color: #21a97e;
+  outline: none;
+  text-decoration: none;
+}
+a:hover { 
+  color:#000;
+}
+
+img { 
+  display:block;
+}
+nav img { 
+  display:block;
+  float: left;
+  height: 70px;
+  margin-top: -3px;
+}
+p {
+  margin:1em 0;
+  font-size: 18px;
+  font-family: 'galanogrotesquealuploadedfile';
+}
+
+:focus {
+  outline: 0;
+}
+
+/* Nav Principal
+*****************************************************************/
+
+a#principal {
+  text-decoration:none;
+  color:#F8F8F8;
+  -webkit-transition:color 0.5s ease-out;
+  -moz-transition:color 0.5s ease-out;
+  -o-transition:color 0.5s ease-out;
+  -ms-transition:color 0.5s ease-out;
+}
+
+nav#principal{
+  background-color: #fff;
+  height: 60px;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  position: fixed;
+}
+
+nav#principal > img{
+  margin-left: 25px; 
+  width: 80px;
+  float: left;
+}
+
+
+nav#principal > ul{
+  list-style-type: none;
+  width: 50%;
+  border-bottom: 1px solid #353535;
+  margin: 0;
+  padding-right: 10px;
+  width: auto;
+  position: relative;
+  font-size: 28px;
+}
+
+nav#principal > ul > li{
+  display: inline-block;
+  padding: 8px;
+}
+
+nav#principal > ul > li > a:link{
+  color: black;
+  line-height: 55px;
+  text-decoration: none;
+  filter:alpha(opacity=100);
+  -moz-opacity:1;
+  opacity:1;
+}
+
+nav#principal > ul > li > a:visited{
+  color: black;
+}
+
+nav#principal > ul > li > a:hover{
+  color: #6FBF73;
+}
+
+div#cssmenu{
+  width: 8 00px;
+  height: 60px;
+  padding-right: 95px;
+  margin: 0 auto;
+  display:table;
+}
+
+#cssmenu ul:before {
+  content: '';
+  display: block;
+}
+#cssmenu ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#cssmenu li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0 4px;
+}
+#cssmenu li a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 16px 16px 9px 19px;
+  border-bottom: 3px solid transparent;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: 'galanogrotesque-tuploadedfile';
+}
+#cssmenu li a:hover {
+  color: #6FBF73;
+  border-bottom: 2px solid #000000;
+
+}
+#cssmenu li.active a {
+  display: inline;
+  border-bottom: 2px solid #000000;
+  margin: 0 auto;]
+}
+
+.pagina-ativa{
+  display: inline;
+  border-bottom: 2px solid #000000 !important;
+  margin: 0 auto; 
+}
+
+
+section{
+ width: 100%;
+ overflow: hidden;
+ overflow: hidden;
+ background:url(img/contato.jpg) no-repeat;
+ background-size: 100%;
+ background-repeat: no-repeat;
+ background-color: #000;
+}
+
+#feedback-page{
+ text-align:center;
+}
+
+#form-main{
+ width:100%;
+ float:left;
+ padding-top:50px;
+}
+
+#form-div {
+ background-color:rgba(72,72,72,0.4);
+ padding-left:35px;
+ padding-right:35px;
+ padding-top:1px;
+ padding-bottom:50px;
+ width: 450px;
+ left: 50%;
+ margin: 0 auto;
+ -moz-border-radius: 7px;
+ -webkit-border-radius: 0px;
+ margin-bottom: 100px;
+}
+
+.feedback-input {
+  color:#3c3c3c;
+  font-family: 'galanogrotesque-tuploadedfile';
+  font-weight:500;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 0;
+  line-height: 22px;
+  background-color: #fbfbfb;
+  padding: 13px 13px 13px 54px;
+  margin-bottom: 10px;
+  width:100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+ background: #fff;
+ box-shadow: 0;
+ border: 3px solid rgba(39, 174, 96,1.0);
+ color: rgba(39, 174, 96,1.0);
+ outline: none;
+ padding: 13px 13px 13px 54px;
+}
+
+.focused{
+ -webkit-column-rule: rgba(46, 204, 113,1.0);
+ -moz-column-rule: rgba(46, 204, 113,1.0);
+ -o-column-rule: rgba(46, 204, 113,1.0);
+ column-rule: rgba(46, 204, 113,1.0);6;
+ border:rgba(46, 204, 113,1.0) solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name{
+ background-image: url(img/contato/user.png);
+ background-size: 30px 30px;
+ background-position: 11px 8px;
+ background-repeat: no-repeat;
+}
+
+#name:focus{
+ background-image: urlurl(img/contato/user.png);
+ background-size: 30px 30px;
+ background-position: 8px 5px;
+ background-position: 11px 8px;
+ background-repeat: no-repeat;
+}
+
+#email{
+ background-image: url(img/contato/mail4.png);
+ background-size: 30px 30px;
+ background-position: 11px 8px;
+ background-repeat: no-repeat;
+}
+
+#email:focus{
+ background-image: url(img/contato/mail4.png);
+ background-size: 30px 30px;
+ background-position: 11px 8px;
+ background-repeat: no-repeat;
+}
+
+#tel{
+ background-image: url(img/contato/phone.png);
+ background-size: 30px 30px;
+ background-position: 11px 8px;
+ background-repeat: no-repeat;
+}
+
+#tel:focus{
+ background-image: url(img/contato/phone.png);
+ background-size: 30px 30px;
+ background-position: 8px 5px;
+ background-position: 11px 8px;
+ background-repeat: no-repeat;
+}
+
+#comment{
+ background-image: url(img/contato/pencil.png);
+ background-size: 30px 30px;
+ background-position: 11px 8px;
+ background-repeat: no-repeat;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+  max-height: 150px;
+
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+ background-color:white;
+}
+
+#button-blue{
+ float:left;
+ width: 100%;
+ border: #fbfbfb solid 4px;
+ cursor:pointer;
+ background-color: rgba(39, 174, 96,1.0);
+ color:white;
+ font-size:24px;
+ padding-top:22px;
+ padding-bottom:22px;
+ -webkit-transition: all 0.3s;
+ -moz-transition: all 0.3s;
+ transition: all 0.3s;
+ margin-top:-4px;
+ font-weight:700;
+ font-family: 'galanogrotesque-tuploadedfile';
+}
+
+#button-blue:hover{
+ background-color: rgba(0,0,0,0);
+ color:rgba(46, 204, 113,1.0);
+}
+
+.submit:hover {
+ color: rgba(39, 174, 96,1.0);
+}
+
+.ease {
+ width: 0px;
+ height: 74px;
+ background-color: #fbfbfb;
+ -webkit-transition: .3s ease;
+ -moz-transition: .3s ease;
+ -o-transition: .3s ease;
+ -ms-transition: .3s ease;
+ transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+ #form-div{
+  left: 3%;
+  margin-right: 3%;
+  width: 88%;
+  margin-left: 0;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+}
+
+#mapa{
+  width: 100%; 
+  height: 360px; 
+  border: 1px solid #ccc;
+  float: left;
+
+}
+
+
+h1 {
+  color: #E3E2AB;
+  font-family: 'galanogrotesque-tuploadedfile';
+  line-height: 65px;
+  font-size: 4em;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 100px;
+}
+
+
+#texto{
+ color:#E3E2AB;
+ width: 100%;
+ z-index: 10;
+}
+
+/*Footer
+***************************************************************/
+footer{
+  width: 100%;
+  height: 360px;
+  background-color: black;
+  clear: both;
+  background-repeat: no-repeat;
+}
+
+footer > img{
+  width: 250px;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: block;
+}
+footer p{
+  text-align: center;
+  color: rgba(236, 240, 241,1.0);
+  font-size: 18px;
+  word-spacing: 5px;
+  padding-top: 8px;
+}
+
+footer h1{
+  width: 170px;
+  font-size: 40px;
+  color: rgba(236, 240, 241,1.0);
+  margin: 0 auto;
+  font-weight: bolder;
+  padding-top: 48px;
+
+}
+
+footer > p:nth-child(3){
+  color: rgba(236, 240, 241,1.0);
+  margin: 0 auto;
+  padding-top: 77px;
+}
+
+footer > article{
+  width: 264px;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 50px;  
+}
+
+button, .vertical, .vertical li{
+  display: none;
+}
+
+
+
+/* Media Queries
+***************************************************************/
+
+@media (max-width: 890px){
+
+  button{
+    display: block;
+    float: right;
+    background-color: #1B9B48;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+
+  .linha{
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 3px;
+  }
+
+  .vertical{
+    z-index: 44;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top: 3.2em;
+    font-size: 19px;
+    font-weight: bolder;
+  }
+
+  .vertical li{
+    display: block;
+    margin-left: 4%;
+
+  }
+
+  .vertical > li > a{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    font-family: 'galanogrotesque-tuploadedfile';
+  }
+
+  div#cssmenu{
+    display: none;
+  }
+
+  #texto{
+
+  }
+
+}
+
+@media (max-width: 600px){
+
+  footer p {
+    font-size: 16px;
+  }
+  
+  #caixa-escura {
+    width: 218px;
+    padding-left: 20px;
+    padding-right: 12px;
+  }
+
+  footer h1{
+    padding-top: 0px;
+  }
+
+
+
+}
+
+
+
+/*Redes Sociais
+***********************************************************************/
+
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+
+#icons {
+  text-align: center;
+  background-color: rgba(39, 174, 96,1.0);
+}
+#icons > div {
+  display: inline-block;
+  margin: 10px;
+}
+
+
+#fill-facebook{
+  border: 2px solid white;
+  width: 40px;
+  overflow: hidden;
+  height: 40px;
+  position: relative;
+  color: white;
+  -webkit-transition: border-color 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out;
+}
+#fill-facebook > a > i{
+  line-height: 45px;
+  font-size: 2.0em;
+  text-align: center;
+  display: block;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  position: relative;
+  z-index: 10;
+  text-decoration:none;
+}
+#fill-facebook:hover{
+  border-color: rgb(59, 89, 152);
+}
+
+#fill-facebook:hover > a > i{
+  color: white;
+}
+#fill-facebook:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  background: rgb(59, 89, 152);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+#fill-facebook:hover:before{
+  left: -5px;
+  top: -5px;
+  width: 45px;
+  height: 45px;
+}
+
+#fill-facebook > a{
+  color: white;
+}
+
+
+/************************************************/
+
+#fill-linkedin{
+  border: 2px solid white;
+  width: 40px;
+  overflow: hidden;
+  height: 40px;
+  position: relative;
+  color: white;
+  -webkit-transition: border-color 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out;
+}
+#fill-linkedin i{
+  line-height: 45px;
+  font-size: 2.0em;
+  text-align: center;
+  display: block;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+#fill-linkedin:hover{
+  border-color: rgb(0, 123, 182);
+}
+
+
+#fill-linkedin:hover i{
+  color: white;
+}
+#fill-linkedin:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  background: rgb(0, 123, 182);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+#fill-linkedin:hover:before{
+  left: -5px;
+  top: -5px;
+  width: 45px;
+  height: 45px;
+}
+
+#fill-linkedin > a{
+  color: white;
+}
+
+/************************************************/
+
+#fill-instagram{
+  border: 2px solid white;
+  width: 40px;
+  overflow: hidden;
+  height: 40px;
+  position: relative;
+  color: white;
+  -webkit-transition: border-color 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out;
+}
+#fill-instagram i{
+  line-height: 45px;
+  font-size: 2.0em;
+  text-align: center;
+  display: block;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+#fill-instagram:hover{
+  border-color: rgb(81, 127, 164);
+}
+
+
+#fill-instagram:hover i{
+  color: white;
+}
+#fill-instagram:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  background: rgb(81, 127, 164);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+#fill-instagram:hover:before{
+  left: -5px;
+  top: -5px;
+  width: 45px;
+  height: 45px;
+}
+
+#fill-instagram > a{
+  color: white;
+}
+
+/************************************************/
+
+#fill-youtube{
+  border: 2px solid white;
+  width: 40px;
+  overflow: hidden;
+  height: 40px;
+  position: relative;
+  color: white;
+  -webkit-transition: border-color 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out;
+}
+#fill-youtube i{
+  line-height: 43px;
+  font-size: 2.0em;
+  text-align: center;
+  display: block;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+#fill-youtube:hover{
+  border-color: rgb(187, 0, 0);
+}
+
+
+#fill-youtube:hover i{
+  color: white;
+}
+#fill-youtube:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  background: rgb(187, 0, 0);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+#fill-youtube:hover:before{
+  left: -5px;
+  top: -5px;
+  width: 45px;
+  height: 45px;
+}
+
+#fill-youtube > a{
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
